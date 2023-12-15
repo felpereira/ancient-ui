@@ -17,9 +17,19 @@
     "clean": "rimraf dist",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
     "preversion": "npm run build",
-    "version": "npm publish"
+    "version": "npm publish",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "7.6.5",
+    "@storybook/addon-interactions": "7.6.5",
+    "@storybook/addon-links": "7.6.5",
+    "@storybook/addon-onboarding": "1.0.10",
+    "@storybook/blocks": "7.6.5",
+    "@storybook/react": "7.6.5",
+    "@storybook/react-webpack5": "7.6.5",
+    "@storybook/test": "7.6.5",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/react": "^18.2.45",
     "prettier": "^3.1.1",
@@ -28,9 +38,11 @@
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
     "sort-package-json": "^2.6.0",
+    "storybook": "7.6.5",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
