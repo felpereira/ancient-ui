@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Input } from "../index";
+import { Button } from "../index";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: any = {
-  title: "Acient-Ui/InputText",
-  component: Input,
+  title: "Acient-Ui/ButtonText",
+  component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
@@ -13,7 +13,7 @@ const meta: any = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,15 +23,6 @@ export const Padrao: Story = {
   name: "Padrao Simples",
   args: {
     label: "Login",
-    name: "Input",
-  },
-};
-
-export const Senha: Story = {
-  name: "Senha",
-  args: {
-    label: "Senha",
-    name: "Input",
-    password: true,
+    name: "Button",
   },
 };
