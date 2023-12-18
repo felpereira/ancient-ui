@@ -1,0 +1,127 @@
+/* Aileron-Black */
+@font-face {
+  font-family: "Aileron-Black";
+  src:
+    local("Aileron-Black"),
+    url(./fonts/Aileron-Black.otf) format("opentype");
+}
+
+/* Aileron-BlackItalic */
+@font-face {
+  font-family: "Aileron-BlackItalic";
+  src:
+    local("Aileron-BlackItalic"),
+    url(./fonts/Aileron-BlackItalic.otf) format("opentype");
+}
+
+/* Aileron-Bold */
+@font-face {
+  font-family: "Aileron-Bold";
+  src:
+    local("Aileron-Bold"),
+    url(./fonts/Aileron-Bold.otf) format("opentype");
+}
+
+/* Aileron-BoldItalic */
+@font-face {
+  font-family: "Aileron-BoldItalic";
+  src:
+    local("Aileron-BoldItalic"),
+    url(./fonts/Aileron-BoldItalic.otf) format("opentype");
+}
+
+/* Aileron-Heavy */
+@font-face {
+  font-family: "Aileron-Heavy";
+  src:
+    local("Aileron-Heavy"),
+    url(./fonts/Aileron-Heavy.otf) format("opentype");
+}
+
+/* Aileron-HeavyItalic */
+@font-face {
+  font-family: "Aileron-HeavyItalic";
+  src:
+    local("Aileron-HeavyItalic"),
+    url(./fonts/Aileron-HeavyItalic.otf) format("opentype");
+}
+
+/* Aileron-Italic */
+@font-face {
+  font-family: "Aileron-Italic";
+  src:
+    local("Aileron-Italic"),
+    url(./fonts/Aileron-Italic.otf) format("opentype");
+}
+
+/* Aileron-Light */
+@font-face {
+  font-family: "Aileron-Light";
+  src:
+    local("Aileron-Light"),
+    url(./fonts/Aileron-Light.otf) format("opentype");
+}
+
+/* Aileron-LightItalic */
+@font-face {
+  font-family: "Aileron-LightItalic";
+  src:
+    local("Aileron-LightItalic"),
+    url(./fonts/Aileron-LightItalic.otf) format("opentype");
+}
+
+/* Aileron-Regular */
+@font-face {
+  font-family: "Aileron-Regular";
+  src:
+    local("Aileron-Regular"),
+    url(./fonts/Aileron-Regular.otf) format("opentype");
+}
+
+/* Aileron-SemiBold */
+@font-face {
+  font-family: "Aileron-SemiBold";
+  src:
+    local("Aileron-SemiBold"),
+    url(./fonts/Aileron-SemiBold.otf) format("opentype");
+}
+
+/* Aileron-SemiBoldItalic */
+@font-face {
+  font-family: "Aileron-SemiBoldItalic";
+  src:
+    local("Aileron-SemiBoldItalic"),
+    url(./fonts/Aileron-SemiBoldItalic.otf) format("opentype");
+}
+
+/* Aileron-Thin */
+@font-face {
+  font-family: "Aileron-Thin";
+  src:
+    local("Aileron-Thin"),
+    url(./fonts/Aileron-Thin.otf) format("opentype");
+}
+
+/* Aileron-ThinItalic */
+@font-face {
+  font-family: "Aileron-ThinItalic";
+  src:
+    local("Aileron-ThinItalic"),
+    url(./fonts/Aileron-ThinItalic.otf) format("opentype");
+}
+
+/* Aileron-UltraLight */
+@font-face {
+  font-family: "Aileron-UltraLight";
+  src:
+    local("Aileron-UltraLight"),
+    url(./fonts/Aileron-UltraLight.otf) format("opentype");
+}
+
+/* Aileron-UltraLightItalic */
+@font-face {
+  font-family: "Aileron-UltraLightItalic";
+  src:
+    local("Aileron-UltraLightItalic"),
+    url(./fonts/Aileron-UltraLightItalic.otf) format("opentype");
+}
