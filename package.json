@@ -14,12 +14,12 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc",
+    "build-storybook": "storybook build",
     "clean": "rimraf dist",
+    "deploy": "npm version patch && npm publish",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
-    "preversion": "npm run build",
-    "version": "npm publish",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "preversion": "npm run build"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.5",
