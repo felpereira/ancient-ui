@@ -17,6 +17,7 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist",
     "deploy": "npm version patch && npm publish",
+    "prereleaseAlpha": "npm version prerelease --preid=alpha",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
     "storybook": "storybook dev -p 6006",
     "preversion": "npm run build"
