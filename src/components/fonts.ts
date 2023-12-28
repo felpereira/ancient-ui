@@ -1,4 +1,4 @@
-export const aileronFonts = [
+export const aileronFonts: LocalFont[] = [
   {
     path: "./fonts/Aileron-Black.otf",
     weight: "900",
@@ -80,3 +80,10 @@ export const aileronFonts = [
     style: "italic",
   },
 ];
+
+type LocalFont = {
+  path: string;
+  weight: string; // Adjust the type according to your font library's requirements
+  style: "normal" | "italic" | "oblique" | string; // Adjust as needed
+  // Add more properties if necessary
+};
