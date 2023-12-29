@@ -1,5 +1,6 @@
 {
   "include": [
+    "src/fonts",
     "src/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.css",
