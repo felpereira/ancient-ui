@@ -17,8 +17,8 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist",
     "deploy": "npm version patch && npm publish",
-    "prereleaseAlpha": "npm version prerelease --preid=alpha",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
+    "prereleaseAlpha": "npm version prerelease --preid=alpha",
     "storybook": "storybook dev -p 6006",
     "preversion": "npm run build"
   },
@@ -40,6 +40,7 @@
     "rimraf": "^5.0.5",
     "sort-package-json": "^2.6.0",
     "storybook": "7.6.5",
+    "tsc-hooks": "^1.1.2",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

@@ -4522,6 +4522,7 @@ __metadata:
     rimraf: "npm:^5.0.5"
     sort-package-json: "npm:^2.6.0"
     storybook: "npm:7.6.5"
+    tsc-hooks: "npm:^1.1.2"
     typescript: "npm:^5.3.3"
   peerDependencies:
     react: ^18.2.0
@@ -7799,7 +7800,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2, json5@npm:^2.2.3":
+"json5@npm:^2.1.2, json5@npm:^2.2.0, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -10566,6 +10567,17 @@ __metadata:
   version: 2.2.0
   resolution: "ts-dedent@npm:2.2.0"
   checksum: 175adea838468cc2ff7d5e97f970dcb798bbcb623f29c6088cb21aa2880d207c5784be81ab1741f56b9ac37840cbaba0c0d79f7f8b67ffe61c02634cafa5c303
+  languageName: node
+  linkType: hard
+
+"tsc-hooks@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "tsc-hooks@npm:1.1.2"
+  dependencies:
+    json5: "npm:^2.2.0"
+  peerDependencies:
+    typescript: "^4.3.2 || ^5.0.2 "
+  checksum: 4fa297a7b055b49d59542bb1ab39844cb3cbbda53a4b78fbacda5c7699e92a56d93d93b5b28f88cf140ba6a3d2d8e0fadd9e7bd47f5252999d8584c62102dcf4
   languageName: node
   linkType: hard
 
