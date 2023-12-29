@@ -2,7 +2,8 @@
   "include": [
     "src/**/*.tsx",
     "src/**/*.ts",
-    "src/**/*.css"
+    "src/**/*.css",
+    "src/**/*.otf"
   ] /* Include only the src directory */,
   "compilerOptions": {
     "jsx": "react",
