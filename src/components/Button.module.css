@@ -1,3 +1,14 @@
 .button:hover {
-  background-color: "#f2f3f5" !important;
+  background-color: #f8f8f8 !important;
+  cursor: pointer;
+}
+
+.button {
+  font-family: "Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  background-color: #c9caca;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 30px;
+  transition: background 0.3s;
 }
