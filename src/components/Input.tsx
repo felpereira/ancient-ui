@@ -23,7 +23,7 @@ export const Input = ({
     width: password ? "80%" : "100%",
     background: "#F8F8F8",
     borderStyle: "none",
-    // Remover
+
     outline: "none",
   };
 

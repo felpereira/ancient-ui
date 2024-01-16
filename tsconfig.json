@@ -1,14 +1,19 @@
 {
   "include": [
+    "src/types",
     "src/fonts",
     "src/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.css",
-    "src/**/*.otf"
+    "src/**/*.otf",
+    "src/**/*.d.ts",
   ] /* Include only the src directory */,
   "compilerOptions": {
     "jsx": "react",
-    "lib": ["dom", "es2015"],
+    "lib": [
+      "dom",
+      "es2015"
+    ],
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "module": "commonjs" /* Specify what module code is generated. */,
     "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
@@ -18,6 +23,7 @@
     "strict": true /* Enable all strict type-checking options. */,
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-
-  "hooks": ["copy-files"] // hooks is a new property you can add to tsconfig to add custom hooks
+  "hooks": [
+    "copy-files"
+  ] // hooks is a new property you can add to tsconfig to add custom hooks
 }

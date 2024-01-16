@@ -20,7 +20,9 @@
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
     "prereleaseAlpha": "npm version prerelease --preid=alpha",
     "storybook": "storybook dev -p 6006",
-    "preversion": "npm run build"
+    "preversion": "npm run build",
+    "copyToDev": "node devUtils/copyToDev.js",
+    "useApp": "yarn build && yarn copyToDev"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.5",

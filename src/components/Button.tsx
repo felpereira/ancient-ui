@@ -1,9 +1,11 @@
 import React, { CSSProperties } from "react";
+import styled from "./Button.module.css";
 
 interface ButtonProps {
   label: string;
   name: string;
-  type?: "button" | "submit" | "reset" | undefined;
+  width?: string;
+  type?: "button" | "submit" | "reset";
   style?: CSSProperties;
 }
 
@@ -11,32 +13,35 @@ export const Button = ({
   label,
   name,
   type = "button",
+  width,
   style,
   ...props
 }: ButtonProps) => {
-  return (
-    <div>
-      <button
-        type={type}
-        id="btnCancelarOpcoes"
-        style={{ ...defaultButtonStyle, ...style }}
-        // disabled={!canClose}
-        // onClick={this.handleClose.bind(this)}
-      >
-        {label}
-      </button>
-    </div>
-  );
-};
+  const defaultButtonStyle: CSSProperties = {
+    fontFamily: "Aileron-Regular",
+    background: "#c9caca",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    width: width ?? "100px",
+    height: "30px",
+    transition: "background 0.3s",
+  };
 
-const defaultButtonStyle: CSSProperties = {
-  paddingLeft: "5px",
-  fontFamily: "Aileron-Regular",
-  background: "#F8F8F8",
-  border: "1px solid #ccc",
-  borderRadius: "15px",
-  width: "100px",
-  height: "25px",
+  return (
+    <button
+      type={type}
+      id={"btn" + label.trim()}
+      className={styled.button}
+      style={{
+        ...defaultButtonStyle,
+        ...style,
+      }}
+      // disabled={!canClose}
+      // onClick={this.handleClose.bind(this)}
+    >
+      {label + "2"}
+    </button>
+  );
 };
 
 const defaultBorderButtonStyle: CSSProperties = {
