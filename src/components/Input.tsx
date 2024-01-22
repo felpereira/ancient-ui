@@ -20,17 +20,20 @@ export const Input = ({
   const defaultInputStyle: CSSProperties = {
     fontFamily: "Aileron-Regular",
     width: password ? "90%" : "100%",
-    background: "#c9caca",
+    background: "#d3d3d3",
     borderStyle: "none",
     outline: "none",
   };
 
   return (
     <div>
-      <div className={styled.defaultLabel}>{label}</div>
+      <label className={styled.defaultLabel} htmlFor={"checkbox" + label}>
+        {label}
+      </label>
       <div className={styled.defaultBorderInputStyle}>
         <input
-          name={name}
+          id={"checkbox" + label}
+          name={"checkbox" + label}
           type={password ? "password" : "text"}
           maxLength={maxLength}
           style={{ ...defaultInputStyle, ...style }}
