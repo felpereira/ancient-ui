@@ -3,18 +3,22 @@ import styled from "./Input.module.css";
 
 interface InputProps {
   label: string;
-  name: string;
+
   maxLength: number;
   password?: boolean;
   style?: CSSProperties;
+  value: string | number | undefined;
+  onChange: (valor: string) => void;
 }
 
 export const Input = ({
   label,
-  name,
+
   style,
   password = false,
   maxLength = 20,
+  value,
+  onChange,
   ...props
 }: InputProps) => {
   const defaultInputStyle: CSSProperties = {
@@ -27,16 +31,18 @@ export const Input = ({
 
   return (
     <div>
-      <label className={styled.defaultLabel} htmlFor={"checkbox" + label}>
+      <label className={styled.defaultLabel} htmlFor={"input" + label}>
         {label}
       </label>
       <div className={styled.defaultBorderInputStyle}>
         <input
-          id={"checkbox" + label}
-          name={"checkbox" + label}
+          id={"input" + label}
+          name={"input" + label}
           type={password ? "password" : "text"}
           maxLength={maxLength}
           style={{ ...defaultInputStyle, ...style }}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
       </div>
     </div>
