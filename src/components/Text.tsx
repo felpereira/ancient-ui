@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 
 interface ButtonProps {
-  label: string;
+  label?: string;
   size?: string;
   weight?: string;
   style?: CSSProperties;
@@ -13,9 +13,7 @@ export const Text = ({ label, size, style, weight, ...props }: ButtonProps) => {
     fontWeight: weight ?? "400",
   };
 
-  return <div style={{ ...defaultButtonStyle, ...style }}>{label}</div>;
-};
-
-const defaultButtonStyle: CSSProperties = {
-  fontSize: "1rem",
+  return label ? (
+    <div style={{ ...defaultButtonStyle, ...style }}>{label}</div>
+  ) : null;
 };

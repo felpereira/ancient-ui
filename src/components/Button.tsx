@@ -6,14 +6,12 @@ interface ButtonProps {
   width?: string;
   type?: "button" | "submit" | "reset";
   style?: CSSProperties;
-  onClick: () => void;
 }
 
 export const Button = ({
   label,
   type = "button",
   width,
-  onClick,
   ...props
 }: ButtonProps) => {
   const defaultButtonStyle: CSSProperties = {
@@ -26,7 +24,6 @@ export const Button = ({
       id={"btn" + label.trim()}
       className={styled.button}
       style={defaultButtonStyle}
-      onClick={onClick}
     >
       {label}
     </button>
