@@ -1,7 +1,14 @@
 import React, { CSSProperties, forwardRef } from "react";
 import styled from "./Input.module.css";
 import { TextError } from "./TextError";
-import { FieldError } from "react-hook-form/dist/types/errors";
+import type { Ref, MultipleFieldErrors, Message } from "react-hook-form";
+
+export type FieldError = {
+  type: string;
+  ref?: Ref;
+  types?: MultipleFieldErrors;
+  message?: Message;
+};
 
 interface InputProps {
   label: string;
@@ -33,14 +40,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             ref={ref}
             id={"input" + label}
-            name={"input" + label}
             maxLength={maxLength}
             type={password ? "password" : "text"}
             style={{ ...defaultInputStyle, ...style }}
             {...props}
           />
         </div>
-        <TextError label={fieldError} size={"0.5rem"} />
+        <TextError label={fieldError} size={"0.8rem"} />
       </div>
     );
   }
