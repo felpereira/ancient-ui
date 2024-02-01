@@ -5,6 +5,8 @@ import { Button } from "./Button";
 
 interface AlertCardBoxProps {
   text?: string;
+  labelAgree?: string;
+  labelRecuse?: string;
   onClickAgree?: () => void;
   onClickRecuse?: () => void;
 }
@@ -12,6 +14,8 @@ interface AlertCardBoxProps {
 export const AlertCard = ({
   onClickAgree,
   onClickRecuse,
+  labelRecuse,
+  labelAgree = "Sim",
   text = undefined,
 }: AlertCardBoxProps) => {
   if (!text) return null;
@@ -22,8 +26,10 @@ export const AlertCard = ({
         {/* tamanho maximo 240 */}
         <div className={styled.text}>{text}</div>
         <div className={styled.button}>
-          <Button label="Não" onClick={onClickRecuse} />
-          <Button label="Sim" type={"submit"} />
+          {labelRecuse && (
+            <Button label={labelRecuse} onClick={onClickRecuse} />
+          )}
+          <Button label={labelAgree} type={"submit"} onClick={onClickAgree} />
         </div>
       </div>
     </div>
