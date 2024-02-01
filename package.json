@@ -16,13 +16,16 @@
     "build": "tsc",
     "build-storybook": "storybook build",
     "clean": "rimraf dist",
+    "copyToDev": "node devUtils/copyToDev.js",
     "deploy": "npm version patch && npm publish",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\" && sort-package-json",
     "prereleaseAlpha": "npm version prerelease --preid=alpha",
     "storybook": "storybook dev -p 6006",
-    "preversion": "npm run build",
-    "copyToDev": "node devUtils/copyToDev.js",
-    "useApp": "yarn build && yarn copyToDev"
+    "useApp": "yarn build && yarn copyToDev",
+    "preversion": "npm run build"
+  },
+  "dependencies": {
+    "react-hook-form": "^7.49.3"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.5",
@@ -48,8 +51,5 @@
   "peerDependencies": {
     "react": "^18.2.0"
   },
-  "packageManager": "yarn@4.0.2",
-  "dependencies": {
-    "react-hook-form": "^7.49.3"
-  }
+  "packageManager": "yarn@4.0.2"
 }
