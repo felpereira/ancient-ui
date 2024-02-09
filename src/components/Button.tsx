@@ -18,7 +18,8 @@ export const Button = ({
     ...props
 }: ButtonProps) => {
     const defaultButtonStyle: CSSProperties = {
-        minWidth: width ?? '100px'
+        minWidth: width ?? '100px',
+        margin: '0px 5px 0px 5px'
     };
 
     return (
