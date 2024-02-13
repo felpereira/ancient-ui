@@ -15,19 +15,24 @@ export const Button = ({
     type = 'button',
     width,
     onClick,
+    style,
     ...props
 }: ButtonProps) => {
+<<<<<<< HEAD
     const defaultButtonStyle: CSSProperties = {
         minWidth: width ?? '100px',
         margin: '0px 5px 0px 5px'
     };
+=======
+    const defaultButtonStyle: CSSProperties = {};
+>>>>>>> bf489cb (.)
 
     return (
         <button
             type={type}
             id={'btn' + label.trim()}
             className={styled.button}
-            style={defaultButtonStyle}
+            style={{ ...defaultButtonStyle, ...style }}
             onClick={onClick}
         >
             {label}
