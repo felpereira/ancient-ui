@@ -7,6 +7,7 @@
     "src/**/*.css",
     "src/**/*.otf",
     "src/**/*.d.ts",
+    "../acient-ui2.0/Text.tsx",
   ] /* Include only the src directory */,
   "compilerOptions": {
     "jsx": "react",
@@ -14,7 +15,10 @@
       "dom",
       "es2015"
     ],
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "noEmit": true,
     "module": "commonjs" /* Specify what module code is generated. */,
     "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
     "outDir": "dist",

@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '../index';
+import { TextError } from '../index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta: any = {
-    title: 'Acient-Ui/ButtonText',
-    component: Button,
+    title: 'Acient-Ui/TextErrorText',
+    component: TextError,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
         layout: 'centered'
@@ -13,7 +13,7 @@ const meta: any = {
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
     tags: ['autodocs']
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof TextError>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,9 +22,6 @@ type Story = StoryObj<typeof meta>;
 export const Padrao: Story = {
     name: 'Padrao Simples',
     args: {
-        label: 'Login',
-        name: 'Button',
-        style: { width: '300px' },
-        onClick: () => console.log('botão')
+        label: { message: 'ERRO MALANDRO' }
     }
 };

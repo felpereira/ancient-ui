@@ -1,8 +1,18 @@
-import React, { Ref, RefObject, forwardRef, useImperativeHandle } from 'react';
+import * as stylex from '@stylexjs/stylex';
+import React, { forwardRef } from 'react';
 
-import styled from './CheckBox.module.css';
 import { FieldError } from './Input';
 import { TextError } from './TextError';
+
+const style = stylex.create({
+    checkBox: {
+        fontFamily:
+            '"Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif',
+        fontSize: '0.75rem',
+        userSelect: 'none',
+        paddingLeft: '0.2rem'
+    }
+});
 
 interface CheckBoxProps {
     isChecked: boolean;
@@ -25,7 +35,7 @@ export const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
                 />
                 <label
                     htmlFor={'checkbox' + label}
-                    className={styled.checkboxLabel}
+                    {...stylex.props(style.checkBox)}
                 >
                     {label}
                 </label>

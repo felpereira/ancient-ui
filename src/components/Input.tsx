@@ -1,8 +1,34 @@
+import * as stylex from '@stylexjs/stylex';
 import React, { CSSProperties, forwardRef } from 'react';
 import type { Message, MultipleFieldErrors, Ref } from 'react-hook-form';
 
-import styled from './Input.module.css';
 import { TextError } from './TextError';
+
+const style = stylex.create({
+    defaultLabel: {
+        fontFamily:
+            '"Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif',
+        paddingLeft: '5px',
+        fontSize: '12px',
+        userSelect: 'none'
+    },
+    defaultBorderInputStyle: {
+        padding: '10px',
+        margin: '5px',
+        borderRadius: '10px',
+        border: '1px solid #ccc',
+        fontFamily:
+            '"Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif',
+        backgroundColor: '#d3d3d3'
+    },
+    defaultInputStyle: {
+        fontFamily:
+            '"Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif',
+        background: '#d3d3d3',
+        borderStyle: 'none',
+        outline: 'none'
+    }
+});
 
 export type FieldError = {
     type: string;
@@ -14,7 +40,7 @@ export type FieldError = {
 interface InputProps {
     label: string;
     password?: boolean;
-    style?: CSSProperties;
+
     maxLength?: number;
     fieldError?: FieldError;
 }
@@ -23,7 +49,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     (
         {
             label,
-            style,
+
             fieldError,
             password = false,
             maxLength = 50,
@@ -32,28 +58,25 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         ref
     ) => {
         const defaultInputStyle: CSSProperties = {
-            fontFamily: 'Aileron-Regular',
-            width: password ? '90%' : '100%',
-            background: '#d3d3d3',
-            borderStyle: 'none',
-            outline: 'none'
+            width: password ? '90%' : '100%'
         };
 
         return (
             <div>
                 <label
-                    className={styled.defaultLabel}
+                    {...stylex.props(style.defaultLabel)}
                     htmlFor={'input' + label}
                 >
                     {label}
                 </label>
-                <div className={styled.defaultBorderInputStyle}>
+                <div {...stylex.props(style.defaultBorderInputStyle)}>
                     <input
                         ref={ref}
                         id={'input' + label}
                         maxLength={maxLength}
                         type={password ? 'password' : 'text'}
-                        style={{ ...defaultInputStyle, ...style }}
+                        {...stylex.props(style.defaultInputStyle)}
+                        style={{ ...defaultInputStyle }}
                         {...props}
                     />
                 </div>

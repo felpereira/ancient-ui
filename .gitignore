@@ -171,3 +171,5 @@ sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/yarn,react,node
 p/.env
+.0/build
+.0/node_modules

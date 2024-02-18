@@ -1,34 +1,47 @@
-import React, { CSSProperties } from 'react';
+import * as stylex from '@stylexjs/stylex';
+import type { StyleXStyles } from '@stylexjs/stylex';
+import React from 'react';
 
-import styled from './Button.module.css';
+const style = stylex.create({
+    button: {
+        fontFamily:
+            '"Aileron-Regular", Helvetica, Arial, Verdana, Tahoma, sans-serif',
+        margin: '0px 5px 0px 5px',
+        fontWeight: '600',
+        backgroundColor: {
+            default: '#d3d3d3',
+            ':hover:': '#f5f3f4'
+        },
+        cursor: { default: 'default', ':hover:': 'pointer' },
+        border: '1px solid #ccc',
+        borderRadius: '20px',
+        minHeight: '30px',
+        transition: 'background 0.3s',
+        padding: '0rem 1rem 0rem 1rem'
+    }
+});
 
 interface ButtonProps {
     label: string;
-    width?: string;
     type?: 'button' | 'submit' | 'reset';
-    style?: CSSProperties;
+    style?: StyleXStyles<{
+        backgroundColor?: string;
+        color?: string;
+    }>;
     onClick?: () => void;
 }
 
 export const Button = ({
     label,
     type = 'button',
-    width,
     onClick,
-    style,
     ...props
 }: ButtonProps) => {
-    const defaultButtonStyle: CSSProperties = {
-        minWidth: width ?? '100px',
-        margin: '0px 5px 0px 5px'
-    };
-
     return (
         <button
             type={type}
             id={'btn' + label.trim()}
-            className={styled.button}
-            style={{ ...defaultButtonStyle, ...style }}
+            {...stylex.props(style.button)}
             onClick={onClick}
         >
             {label}

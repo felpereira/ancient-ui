@@ -1,0 +1,31 @@
+{
+  "sourceType": "unambiguous",
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "chrome": 100,
+          "safari": 15,
+          "firefox": 91
+        }
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@stylexjs/babel-plugin",
+      {
+        "dev": true,
+        "test": true,
+        "runtimeInjection": true,
+        "unstable_moduleResolution": {
+          "type": "commonJS",
+          "rootDir": "__dirname"
+        }
+      }
+    ]
+  ]
+}
